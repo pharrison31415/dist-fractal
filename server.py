@@ -8,18 +8,6 @@ class FractalServer(BaseHTTPRequestHandler):
     def basic_headers(self):
         self.send_header("Connection", "close")
 
-    def send_file(self, file, content_type="text/html"):
-        f = open(file, "rb")
-        content = f.read()
-        f.close()
-
-        self.send_response(200)
-        self.basic_headers()
-        self.send_header("Content-Length", len(content))
-        self.send_header("Content-Type", content_type)
-        self.end_headers()
-        self.wfile.write(content)
-
     def do_GET(self):
         self.send_response(200)
         self.basic_headers()

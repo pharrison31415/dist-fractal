@@ -15,7 +15,8 @@ def main():
 
     # try:
     new_job = get_job()
-    print(new_job)
+    # print(new_job)
+    new_job.exec()
     # except:
     # print("A job was not correctly recieved")
 

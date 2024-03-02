@@ -9,6 +9,11 @@ class Job:
         self.imag_stop = imag_stop
         self.imag_parts = imag_parts
 
+    def exec(self):
+        for i in range(20):
+            print(i, end=" ")
+        print()
+
     def __str__(self):
         s = ""
         s += f"real: {self.real_start}, {self.real_stop}, {self.real_parts}\n"
